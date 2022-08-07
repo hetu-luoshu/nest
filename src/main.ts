@@ -1,8 +1,11 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
+import { NestFactory } from '@nestjs/core'
+import { AppModule } from './app.module'
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+  // 挂载根模块
+  const app = await NestFactory.create(AppModule)
+
+  // 监听服务，端口为3000
+  await app.listen(3000)
 }
-bootstrap();
+bootstrap()
